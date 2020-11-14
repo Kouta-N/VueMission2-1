@@ -5,8 +5,8 @@
     <!-- form1 -->
 
   <pre>STEP1</pre>
-  <p>-性別-</p>
   <p>お客様の情報を入力してください</p>
+  <p>-性別-</p>
       <p>
         <input 
         type="radio" 
@@ -93,7 +93,7 @@ export default {
          if(age < this.syowa){
           return age + this.year + " 昭和(" + age + ")" ;
         }else{
-         return age + this.year + " 平成(" + (age - this.syowa - 1) + ")";
+         return age + this.year + " 平成(" + (age - this.syowa + 1) + ")";
         } 
       },
 
@@ -101,7 +101,7 @@ export default {
          if(age < this.syowa){
           this.$store.state.yearText = age + this.year + " 昭和(" + age + ")" ;
         }else{
-         this.$store.state.yearText = age + this.year + " 平成(" + (age - this.syowa - 1) + ")";
+         this.$store.state.yearText = age + this.year + " 平成(" + (age - this.syowa + 1) + ")";
         }
       },
 
